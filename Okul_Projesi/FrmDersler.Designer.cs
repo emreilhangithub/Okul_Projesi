@@ -64,6 +64,7 @@ namespace Okul_Projesi
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 48;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // dataGridView1
             // 
@@ -74,6 +75,7 @@ namespace Okul_Projesi
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(532, 207);
             this.dataGridView1.TabIndex = 47;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label3
             // 
@@ -145,6 +147,7 @@ namespace Okul_Projesi
             this.button3.TabIndex = 39;
             this.button3.Text = "GÜNCELLE";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox2
             // 
@@ -165,6 +168,7 @@ namespace Okul_Projesi
             this.button2.TabIndex = 37;
             this.button2.Text = "LİSTELE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -185,6 +189,7 @@ namespace Okul_Projesi
             this.button1.TabIndex = 35;
             this.button1.Text = "EKLE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -205,6 +210,7 @@ namespace Okul_Projesi
             this.button5.TabIndex = 33;
             this.button5.Text = "SİL";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // FrmDersler
             // 
@@ -230,10 +236,11 @@ namespace Okul_Projesi
             this.Controls.Add(this.button5);
             this.Font = new System.Drawing.Font("Corbel", 14F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDersler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDersler";
+            this.Load += new System.EventHandler(this.FrmDersler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
