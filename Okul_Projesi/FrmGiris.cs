@@ -10,30 +10,26 @@ using System.Windows.Forms;
 
 namespace Okul_Projesi
 {
-    public partial class FrmOgretmen : Form
+    public partial class FrmGiris : Form
     {
-        public FrmOgretmen()
+        public FrmGiris()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmKlup fr = new FrmKlup();
+            FrmOgrenciNotlar fr = new FrmOgrenciNotlar();
+            fr.numara = textBox1.Text;
             fr.Show();
-            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            FrmDersler fr = new FrmDersler();
+        {            
+            FrmOgretmen fr = new FrmOgretmen();
             fr.Show();
             this.Hide();
+
         }
     }
 }

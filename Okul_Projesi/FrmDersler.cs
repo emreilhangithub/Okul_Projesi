@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Okul_Projesi
 {
-    public partial class Form1 : Form
+    public partial class FrmDersler : Form
     {
-        public Form1()
+        public FrmDersler()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FrmOgrenciNotlar fr = new FrmOgrenciNotlar();
-            fr.numara = textBox1.Text;
-            fr.Show();
         }
     }
 }
