@@ -42,5 +42,12 @@ namespace Okul_Projesi
             fr.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmSinavNotlar fr = new FrmSinavNotlar();
+            fr.Show();
+            this.Hide();
+        }
     }
 }
