@@ -35,5 +35,12 @@ namespace Okul_Projesi
             fr.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmOgrenci fr = new FrmOgrenci();
+            fr.Show();
+            this.Hide();
+        }
     }
 }
