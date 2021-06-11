@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Okul_Projesi
 {
@@ -23,6 +24,7 @@ namespace Okul_Projesi
         }
 
         DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-E9UTSVL;Initial Catalog=Okul;Integrated Security=True");
 
         public void listele()
         {
@@ -33,6 +35,21 @@ namespace Okul_Projesi
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
             listele();
+            
+            baglanti.Open();
+
+            SqlCommand komut = new SqlCommand("Select * from TBLKULUPLER",baglanti);          
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbKulup.DisplayMember = "KULUPAD";  //gozukecek isim
+            CmbKulup.ValueMember = "KULUPID"; //arkadagizli olan id
+            CmbKulup.DataSource = dt;
+
+            baglanti.Close(); //sql data adapterde baglantıyı acıp kapatmaya gerek yok
+
+            
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,9 +74,14 @@ namespace Okul_Projesi
                 c = "Erkek";
             }
             //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
-            ds.OgrenciEkle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c);
+            ds.OgrenciEkle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c);
             MessageBox.Show("Ekleme İşlemi başarılı");
             listele();
+        }
+
+        private void CmbKulup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Txtid.Text = CmbKulup.SelectedValue.ToString();//seçilen değer txt yazdırdık
         }
     }
 }

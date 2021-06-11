@@ -347,11 +347,13 @@ namespace Okul_Projesi
             // 
             // CmbKulup
             // 
+            this.CmbKulup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbKulup.FormattingEnabled = true;
             this.CmbKulup.Location = new System.Drawing.Point(116, 118);
             this.CmbKulup.Name = "CmbKulup";
             this.CmbKulup.Size = new System.Drawing.Size(164, 31);
             this.CmbKulup.TabIndex = 91;
+            this.CmbKulup.SelectedIndexChanged += new System.EventHandler(this.CmbKulup_SelectedIndexChanged);
             // 
             // FrmOgrenci
             // 
