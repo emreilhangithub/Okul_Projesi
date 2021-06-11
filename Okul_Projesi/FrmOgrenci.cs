@@ -54,12 +54,12 @@ namespace Okul_Projesi
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            listele();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            dataGridView1.DataSource =  ds.OgrenciGetir(TxtAra.Text);
         }
 
         string c = "";//global yaptık güncellemede vs kullanmak için
@@ -89,9 +89,20 @@ namespace Okul_Projesi
             Txtid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             TxtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //CmbKulup.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-           
+            CmbKulup.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() == "Kız")
+            {
+                radioButton1.Checked = true;
+            }
+
+            if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() == "Erkek")
+            {
+                radioButton2.Checked = true;
+            }
+
+            
+
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)

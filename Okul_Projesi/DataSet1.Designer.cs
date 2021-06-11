@@ -1729,7 +1729,7 @@ namespace Okul_Projesi.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TBLKULUPLER.KULUPAD, TBLOGRENCILER.OGRID, TBLOGRENCILER.OGRAD, TBLOGRENCIL" +
@@ -1738,29 +1738,37 @@ namespace Okul_Projesi.DataSet1TableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO TBLOGRENCILER\r\n                         (OGRAD, OGRSOYAD, OGRKULUP, O" +
-                "GRCINSIYET)\r\nVALUES        (@OGRAD,@OGRSOYAD,@OGRKULUP,@OGRCINSIYET)";
+            this._commandCollection[1].CommandText = @"SELECT        TBLKULUPLER.KULUPAD, TBLOGRENCILER.OGRID, TBLOGRENCILER.OGRAD, TBLOGRENCILER.OGRSOYAD, TBLOGRENCILER.OGRCINSIYET
+FROM            TBLOGRENCILER INNER JOIN
+                         TBLKULUPLER ON TBLOGRENCILER.OGRKULUP = TBLKULUPLER.KULUPID
+WHERE        (TBLOGRENCILER.OGRAD = @OGRAD)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRKULUP", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "OGRKULUP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRCINSIYET", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRCINSIYET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE       TBLOGRENCILER\r\nSET                OGRAD = @OGRAD, OGRSOYAD = @OGRSOY" +
-                "AD, OGRKULUP = @OGRKULUP, OGRCINSIYET = @OGRCINSIYET\r\nWHERE        (OGRID = @OGR" +
-                "ID)";
+            this._commandCollection[2].CommandText = "INSERT INTO TBLOGRENCILER\r\n                         (OGRAD, OGRSOYAD, OGRKULUP, O" +
+                "GRCINSIYET)\r\nVALUES        (@OGRAD,@OGRSOYAD,@OGRKULUP,@OGRCINSIYET)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRKULUP", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "OGRKULUP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRCINSIYET", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRCINSIYET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "DELETE FROM TBLOGRENCILER\r\nWHERE        (OGRID = @OGRID)";
+            this._commandCollection[3].CommandText = "UPDATE       TBLOGRENCILER\r\nSET                OGRAD = @OGRAD, OGRSOYAD = @OGRSOY" +
+                "AD, OGRKULUP = @OGRKULUP, OGRCINSIYET = @OGRCINSIYET\r\nWHERE        (OGRID = @OGR" +
+                "ID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRKULUP", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "OGRKULUP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRCINSIYET", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRCINSIYET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "DELETE FROM TBLOGRENCILER\r\nWHERE        (OGRID = @OGRID)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1790,9 +1798,45 @@ namespace Okul_Projesi.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DataSet1.DataTable1DataTable dataTable, string OGRAD) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((OGRAD == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OGRAD));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.DataTable1DataTable OgrenciGetir(string OGRAD) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((OGRAD == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OGRAD));
+            }
+            DataSet1.DataTable1DataTable dataTable = new DataSet1.DataTable1DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int OgrenciEkle(string OGRAD, string OGRSOYAD, global::System.Nullable<byte> OGRKULUP, string OGRCINSIYET) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((OGRAD == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1839,7 +1883,7 @@ namespace Okul_Projesi.DataSet1TableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int OgrenciGuncelle(string OGRAD, string OGRSOYAD, global::System.Nullable<byte> OGRKULUP, string OGRCINSIYET, int OGRID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((OGRAD == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1887,7 +1931,7 @@ namespace Okul_Projesi.DataSet1TableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
         public virtual int OgrenciSil(int OGRID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             command.Parameters[0].Value = ((int)(OGRID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
