@@ -62,17 +62,10 @@ namespace Okul_Projesi
             
         }
 
+        string c = "";//global yaptık güncellemede vs kullanmak için
+
         private void button1_Click(object sender, EventArgs e)
-        {
-            string c = "";
-            if(radioButton1.Checked == true)
-            {
-                c = "Kız";
-            }
-            if(radioButton2.Checked == true)
-            {
-                c = "Erkek";
-            }
+        {          
             //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
             ds.OgrenciEkle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c);
             MessageBox.Show("Ekleme İşlemi başarılı");
@@ -82,6 +75,47 @@ namespace Okul_Projesi
         private void CmbKulup_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Txtid.Text = CmbKulup.SelectedValue.ToString();//seçilen değer txt yazdırdık
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            ds.OgrenciSil(int.Parse(Txtid.Text));
+            MessageBox.Show("Silme İşlemi başarılı");
+            listele();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Txtid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            TxtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //CmbKulup.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+           
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            ds.OgrenciGuncelle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c,int.Parse(Txtid.Text));
+            MessageBox.Show("Güncelleme İşlemi başarılı");
+            listele();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                c = "Kız";
+            }
+           
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {            
+            if (radioButton2.Checked == true)
+            {
+                c = "Erkek";
+            }
         }
     }
 }

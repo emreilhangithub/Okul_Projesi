@@ -47,6 +47,9 @@ namespace Okul_Projesi
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnListele = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CmbKulup = new System.Windows.Forms.ComboBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.Txtid = new System.Windows.Forms.TextBox();
@@ -55,9 +58,6 @@ namespace Okul_Projesi
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.CmbKulup = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -91,6 +91,7 @@ namespace Okul_Projesi
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(639, 207);
             this.dataGridView1.TabIndex = 63;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // label3
             // 
@@ -176,6 +177,7 @@ namespace Okul_Projesi
             this.BtnSil.TabIndex = 80;
             this.BtnSil.Text = "SİL";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // pictureBox3
             // 
@@ -196,6 +198,7 @@ namespace Okul_Projesi
             this.BtnGuncelle.TabIndex = 78;
             this.BtnGuncelle.Text = "GUNCELLE";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // pictureBox1
             // 
@@ -256,6 +259,40 @@ namespace Okul_Projesi
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 190);
             this.panel2.TabIndex = 66;
+            // 
+            // CmbKulup
+            // 
+            this.CmbKulup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbKulup.FormattingEnabled = true;
+            this.CmbKulup.Location = new System.Drawing.Point(116, 118);
+            this.CmbKulup.Name = "CmbKulup";
+            this.CmbKulup.Size = new System.Drawing.Size(164, 31);
+            this.CmbKulup.TabIndex = 91;
+            this.CmbKulup.SelectedIndexChanged += new System.EventHandler(this.CmbKulup_SelectedIndexChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(209, 152);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(71, 27);
+            this.radioButton2.TabIndex = 90;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Erkek";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(132, 152);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(52, 27);
+            this.radioButton1.TabIndex = 89;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Kız";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // TxtSoyad
             // 
@@ -322,38 +359,6 @@ namespace Okul_Projesi
             this.label1.Size = new System.Drawing.Size(114, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "OGRENCI ID:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(132, 152);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 27);
-            this.radioButton1.TabIndex = 89;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Kız";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(209, 152);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 27);
-            this.radioButton2.TabIndex = 90;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Erkek";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // CmbKulup
-            // 
-            this.CmbKulup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbKulup.FormattingEnabled = true;
-            this.CmbKulup.Location = new System.Drawing.Point(116, 118);
-            this.CmbKulup.Name = "CmbKulup";
-            this.CmbKulup.Size = new System.Drawing.Size(164, 31);
-            this.CmbKulup.TabIndex = 91;
-            this.CmbKulup.SelectedIndexChanged += new System.EventHandler(this.CmbKulup_SelectedIndexChanged);
             // 
             // FrmOgrenci
             // 
