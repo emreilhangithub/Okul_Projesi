@@ -35,29 +35,29 @@ namespace Okul_Projesi
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtAra = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnAra = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnSil = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnEkle = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnListele = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtSoyad = new System.Windows.Forms.TextBox();
+            this.TxtAd = new System.Windows.Forms.TextBox();
+            this.Txtid = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.CmbKulup = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -68,7 +68,6 @@ namespace Okul_Projesi
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox6
@@ -98,7 +97,7 @@ namespace Okul_Projesi
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(89, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 35);
+            this.label3.Size = new System.Drawing.Size(206, 23);
             this.label3.TabIndex = 62;
             this.label3.Text = "ÖGRENCİ İŞLEM PANELİ";
             // 
@@ -114,28 +113,28 @@ namespace Okul_Projesi
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TxtAra);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.BtnAra);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.BtnSil);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.BtnGuncelle);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnEkle);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnListele);
             this.panel1.Location = new System.Drawing.Point(9, 280);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 190);
             this.panel1.TabIndex = 65;
             // 
-            // textBox1
+            // TxtAra
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 42);
-            this.textBox1.TabIndex = 84;
+            this.TxtAra.Location = new System.Drawing.Point(7, 134);
+            this.TxtAra.Name = "TxtAra";
+            this.TxtAra.Size = new System.Drawing.Size(164, 30);
+            this.TxtAra.TabIndex = 84;
             // 
             // pictureBox7
             // 
@@ -147,16 +146,16 @@ namespace Okul_Projesi
             this.pictureBox7.TabIndex = 83;
             this.pictureBox7.TabStop = false;
             // 
-            // button5
+            // BtnAra
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(233, 134);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 30);
-            this.button5.TabIndex = 82;
-            this.button5.Text = "ARA";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.BtnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAra.Location = new System.Drawing.Point(233, 134);
+            this.BtnAra.Name = "BtnAra";
+            this.BtnAra.Size = new System.Drawing.Size(110, 30);
+            this.BtnAra.TabIndex = 82;
+            this.BtnAra.Text = "ARA";
+            this.BtnAra.UseVisualStyleBackColor = true;
+            this.BtnAra.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox4
             // 
@@ -168,15 +167,15 @@ namespace Okul_Projesi
             this.pictureBox4.TabIndex = 81;
             this.pictureBox4.TabStop = false;
             // 
-            // button4
+            // BtnSil
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(233, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 30);
-            this.button4.TabIndex = 80;
-            this.button4.Text = "SİL";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSil.Location = new System.Drawing.Point(233, 54);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(110, 30);
+            this.BtnSil.TabIndex = 80;
+            this.BtnSil.Text = "SİL";
+            this.BtnSil.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -188,15 +187,15 @@ namespace Okul_Projesi
             this.pictureBox3.TabIndex = 79;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // BtnGuncelle
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(233, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 30);
-            this.button3.TabIndex = 78;
-            this.button3.Text = "GUNCELLE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuncelle.Location = new System.Drawing.Point(233, 18);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(110, 30);
+            this.BtnGuncelle.TabIndex = 78;
+            this.BtnGuncelle.Text = "GUNCELLE";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -208,15 +207,16 @@ namespace Okul_Projesi
             this.pictureBox1.TabIndex = 77;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // BtnEkle
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(63, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 30);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "EKLE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEkle.Location = new System.Drawing.Point(63, 54);
+            this.BtnEkle.Name = "BtnEkle";
+            this.BtnEkle.Size = new System.Drawing.Size(110, 30);
+            this.BtnEkle.TabIndex = 76;
+            this.BtnEkle.Text = "EKLE";
+            this.BtnEkle.UseVisualStyleBackColor = true;
+            this.BtnEkle.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -228,24 +228,25 @@ namespace Okul_Projesi
             this.pictureBox2.TabIndex = 75;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
+            // BtnListele
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(63, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 30);
-            this.button2.TabIndex = 74;
-            this.button2.Text = "LİSTELE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListele.Location = new System.Drawing.Point(63, 18);
+            this.BtnListele.Name = "BtnListele";
+            this.BtnListele.Size = new System.Drawing.Size(110, 30);
+            this.BtnListele.TabIndex = 74;
+            this.BtnListele.Text = "LİSTELE";
+            this.BtnListele.UseVisualStyleBackColor = true;
+            this.BtnListele.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.CmbKulup);
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.TxtSoyad);
+            this.panel2.Controls.Add(this.TxtAd);
+            this.panel2.Controls.Add(this.Txtid);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -256,47 +257,33 @@ namespace Okul_Projesi
             this.panel2.Size = new System.Drawing.Size(292, 190);
             this.panel2.TabIndex = 66;
             // 
-            // textBox6
+            // TxtSoyad
             // 
-            this.textBox6.Location = new System.Drawing.Point(116, 152);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(164, 42);
-            this.textBox6.TabIndex = 89;
+            this.TxtSoyad.Location = new System.Drawing.Point(116, 85);
+            this.TxtSoyad.Name = "TxtSoyad";
+            this.TxtSoyad.Size = new System.Drawing.Size(164, 30);
+            this.TxtSoyad.TabIndex = 87;
             // 
-            // textBox5
+            // TxtAd
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 118);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 42);
-            this.textBox5.TabIndex = 88;
+            this.TxtAd.Location = new System.Drawing.Point(116, 51);
+            this.TxtAd.Name = "TxtAd";
+            this.TxtAd.Size = new System.Drawing.Size(164, 30);
+            this.TxtAd.TabIndex = 86;
             // 
-            // textBox4
+            // Txtid
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 85);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 42);
-            this.textBox4.TabIndex = 87;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(116, 51);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 42);
-            this.textBox3.TabIndex = 86;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(116, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 42);
-            this.textBox2.TabIndex = 85;
+            this.Txtid.Location = new System.Drawing.Point(116, 15);
+            this.Txtid.Name = "Txtid";
+            this.Txtid.Size = new System.Drawing.Size(164, 30);
+            this.Txtid.TabIndex = 85;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(27, 159);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 35);
+            this.label6.Size = new System.Drawing.Size(90, 23);
             this.label6.TabIndex = 4;
             this.label6.Text = "CİNSİYET:";
             // 
@@ -305,7 +292,7 @@ namespace Okul_Projesi
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(30, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 35);
+            this.label5.Size = new System.Drawing.Size(87, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "KULUBU:";
             // 
@@ -314,7 +301,7 @@ namespace Okul_Projesi
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(43, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 35);
+            this.label4.Size = new System.Drawing.Size(74, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "SOYAD:";
             // 
@@ -323,7 +310,7 @@ namespace Okul_Projesi
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(72, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 35);
+            this.label2.Size = new System.Drawing.Size(45, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "ADI:";
             // 
@@ -332,24 +319,46 @@ namespace Okul_Projesi
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 35);
+            this.label1.Size = new System.Drawing.Size(114, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "OGRENCI ID:";
             // 
-            // textEdit1
+            // radioButton1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(353, 136);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(216, 28);
-            this.textEdit1.TabIndex = 67;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(132, 152);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(52, 27);
+            this.radioButton1.TabIndex = 89;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Kız";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(209, 152);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(71, 27);
+            this.radioButton2.TabIndex = 90;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Erkek";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // CmbKulup
+            // 
+            this.CmbKulup.FormattingEnabled = true;
+            this.CmbKulup.Location = new System.Drawing.Point(116, 118);
+            this.CmbKulup.Name = "CmbKulup";
+            this.CmbKulup.Size = new System.Drawing.Size(164, 31);
+            this.CmbKulup.TabIndex = 91;
             // 
             // FrmOgrenci
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 35F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(660, 474);
-            this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox6);
@@ -375,7 +384,6 @@ namespace Okul_Projesi
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,28 +396,28 @@ namespace Okul_Projesi
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtAra;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnAra;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnEkle;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnListele;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtSoyad;
+        private System.Windows.Forms.TextBox TxtAd;
+        private System.Windows.Forms.TextBox Txtid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox CmbKulup;
     }
 }

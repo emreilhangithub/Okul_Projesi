@@ -24,9 +24,15 @@ namespace Okul_Projesi
 
         DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
 
-        private void FrmOgrenci_Load(object sender, EventArgs e)
+        public void listele()
         {
             dataGridView1.DataSource = ds.OgrenciListesi();
+        }
+
+
+        private void FrmOgrenci_Load(object sender, EventArgs e)
+        {
+            listele();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,7 +42,24 @@ namespace Okul_Projesi
 
         private void button5_Click(object sender, EventArgs e)
         {
-            textEdit1.Text = "5";
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string c = "";
+            if(radioButton1.Checked == true)
+            {
+                c = "Kız";
+            }
+            if(radioButton2.Checked == true)
+            {
+                c = "Erkek";
+            }
+            //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
+            ds.OgrenciEkle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c);
+            MessageBox.Show("Ekleme İşlemi başarılı");
+            listele();
         }
     }
 }
