@@ -49,5 +49,12 @@ namespace Okul_Projesi
             fr.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmOgretmenler fr = new FrmOgretmenler();
+            fr.Show();
+            this.Hide();
+        }
     }
 }

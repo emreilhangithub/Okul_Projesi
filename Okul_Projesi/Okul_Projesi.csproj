@@ -94,6 +94,12 @@
     <Compile Include="FrmOgretmen.Designer.cs">
       <DependentUpon>FrmOgretmen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOgretmenler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgretmenler.Designer.cs">
+      <DependentUpon>FrmOgretmenler.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSinavNotlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOgretmen.resx">
       <DependentUpon>FrmOgretmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgretmenler.resx">
+      <DependentUpon>FrmOgretmenler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSinavNotlar.resx">
       <DependentUpon>FrmSinavNotlar.cs</DependentUpon>
