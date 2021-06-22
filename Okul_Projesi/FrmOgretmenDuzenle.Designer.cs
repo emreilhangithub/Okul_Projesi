@@ -1,7 +1,7 @@
 ﻿
 namespace Okul_Projesi
 {
-    partial class FrmOgretmenler
+    partial class FrmOgretmenDuzenle
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Okul_Projesi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgretmenler));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgretmenDuzenle));
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.TxtAra = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@ namespace Okul_Projesi
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pctKapat = new System.Windows.Forms.PictureBox();
+            this.btnTemizle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -74,7 +75,7 @@ namespace Okul_Projesi
             // 
             // TxtAra
             // 
-            this.TxtAra.Location = new System.Drawing.Point(7, 134);
+            this.TxtAra.Location = new System.Drawing.Point(9, 107);
             this.TxtAra.Name = "TxtAra";
             this.TxtAra.Size = new System.Drawing.Size(164, 20);
             this.TxtAra.TabIndex = 84;
@@ -82,7 +83,7 @@ namespace Okul_Projesi
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(177, 134);
+            this.pictureBox7.Location = new System.Drawing.Point(177, 97);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 30);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,12 +93,13 @@ namespace Okul_Projesi
             // BtnAra
             // 
             this.BtnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAra.Location = new System.Drawing.Point(233, 134);
+            this.BtnAra.Location = new System.Drawing.Point(233, 97);
             this.BtnAra.Name = "BtnAra";
             this.BtnAra.Size = new System.Drawing.Size(110, 30);
             this.BtnAra.TabIndex = 82;
             this.BtnAra.Text = "ARA";
             this.BtnAra.UseVisualStyleBackColor = true;
+            this.BtnAra.Click += new System.EventHandler(this.BtnAra_Click);
             // 
             // pictureBox4
             // 
@@ -118,6 +120,7 @@ namespace Okul_Projesi
             this.BtnSil.TabIndex = 80;
             this.BtnSil.Text = "SİL";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // pictureBox3
             // 
@@ -138,6 +141,7 @@ namespace Okul_Projesi
             this.BtnGuncelle.TabIndex = 78;
             this.BtnGuncelle.Text = "GUNCELLE";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // pictureBox1
             // 
@@ -151,6 +155,7 @@ namespace Okul_Projesi
             // 
             // Txtid
             // 
+            this.Txtid.Enabled = false;
             this.Txtid.Location = new System.Drawing.Point(119, 58);
             this.Txtid.Name = "Txtid";
             this.Txtid.Size = new System.Drawing.Size(164, 20);
@@ -159,7 +164,7 @@ namespace Okul_Projesi
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 134);
+            this.label5.Location = new System.Drawing.Point(55, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 3;
@@ -168,7 +173,7 @@ namespace Okul_Projesi
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 58);
+            this.label1.Location = new System.Drawing.Point(13, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 0;
@@ -183,6 +188,7 @@ namespace Okul_Projesi
             this.BtnEkle.TabIndex = 76;
             this.BtnEkle.Text = "EKLE";
             this.BtnEkle.UseVisualStyleBackColor = true;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // panel2
             // 
@@ -209,11 +215,11 @@ namespace Okul_Projesi
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 97);
+            this.label2.Location = new System.Drawing.Point(28, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ADI:";
+            this.label2.Text = "ADI SOYADI:";
             // 
             // pictureBox2
             // 
@@ -234,9 +240,11 @@ namespace Okul_Projesi
             this.BtnListele.TabIndex = 74;
             this.BtnListele.Text = "LİSTELE";
             this.BtnListele.UseVisualStyleBackColor = true;
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnTemizle);
             this.panel1.Controls.Add(this.TxtAra);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.BtnAra);
@@ -263,6 +271,7 @@ namespace Okul_Projesi
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(639, 207);
             this.dataGridView1.TabIndex = 69;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label3
             // 
@@ -294,6 +303,17 @@ namespace Okul_Projesi
             this.pctKapat.TabStop = false;
             this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTemizle.Location = new System.Drawing.Point(233, 147);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(110, 30);
+            this.btnTemizle.TabIndex = 85;
+            this.btnTemizle.Text = "TEMİZLE";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
             // FrmOgretmenler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +330,7 @@ namespace Okul_Projesi
             this.Name = "FrmOgretmenler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOgretmenler";
+            this.Load += new System.EventHandler(this.FrmOgretmenler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -351,5 +372,6 @@ namespace Okul_Projesi
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pctKapat;
+        private System.Windows.Forms.Button btnTemizle;
     }
 }

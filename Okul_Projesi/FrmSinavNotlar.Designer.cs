@@ -55,7 +55,7 @@ namespace Okul_Projesi
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BtnHesapla = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pctKapat = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@ namespace Okul_Projesi
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -131,6 +131,7 @@ namespace Okul_Projesi
             // 
             // TxtDurum
             // 
+            this.TxtDurum.Enabled = false;
             this.TxtDurum.Location = new System.Drawing.Point(380, 94);
             this.TxtDurum.Name = "TxtDurum";
             this.TxtDurum.Size = new System.Drawing.Size(113, 20);
@@ -138,6 +139,7 @@ namespace Okul_Projesi
             // 
             // TxtOrtalama
             // 
+            this.TxtOrtalama.Enabled = false;
             this.TxtOrtalama.Location = new System.Drawing.Point(380, 55);
             this.TxtOrtalama.Name = "TxtOrtalama";
             this.TxtOrtalama.Size = new System.Drawing.Size(113, 20);
@@ -238,6 +240,7 @@ namespace Okul_Projesi
             this.BtnTemizle.TabIndex = 63;
             this.BtnTemizle.Text = "TEMİZLE";
             this.BtnTemizle.UseVisualStyleBackColor = true;
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
             // 
             // pictureBox1
             // 
@@ -315,16 +318,16 @@ namespace Okul_Projesi
             this.BtnHesapla.UseVisualStyleBackColor = true;
             this.BtnHesapla.Click += new System.EventHandler(this.BtnHesapla_Click);
             // 
-            // pictureBox6
+            // pctKapat
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(714, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(74, 48);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 51;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pctKapat.Image = ((System.Drawing.Image)(resources.GetObject("pctKapat.Image")));
+            this.pctKapat.Location = new System.Drawing.Point(714, 3);
+            this.pctKapat.Name = "pctKapat";
+            this.pctKapat.Size = new System.Drawing.Size(74, 48);
+            this.pctKapat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctKapat.TabIndex = 51;
+            this.pctKapat.TabStop = false;
+            this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
             // 
             // label3
             // 
@@ -372,7 +375,7 @@ namespace Okul_Projesi
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 442);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pctKapat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
@@ -387,7 +390,7 @@ namespace Okul_Projesi
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -419,7 +422,7 @@ namespace Okul_Projesi
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button BtnHesapla;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pctKapat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;

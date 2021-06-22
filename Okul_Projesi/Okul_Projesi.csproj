@@ -82,23 +82,23 @@
     <Compile Include="FrmOgrenci.Designer.cs">
       <DependentUpon>FrmOgrenci.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgrenciNotlar.cs">
+    <Compile Include="FrmOgrenciPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgrenciNotlar.Designer.cs">
-      <DependentUpon>FrmOgrenciNotlar.cs</DependentUpon>
+    <Compile Include="FrmOgrenciPaneli.Designer.cs">
+      <DependentUpon>FrmOgrenciPaneli.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgretmen.cs">
+    <Compile Include="FrmOgretmenPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgretmen.Designer.cs">
-      <DependentUpon>FrmOgretmen.cs</DependentUpon>
+    <Compile Include="FrmOgretmenPaneli.Designer.cs">
+      <DependentUpon>FrmOgretmenPaneli.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgretmenler.cs">
+    <Compile Include="FrmOgretmenDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgretmenler.Designer.cs">
-      <DependentUpon>FrmOgretmenler.cs</DependentUpon>
+    <Compile Include="FrmOgretmenDuzenle.Designer.cs">
+      <DependentUpon>FrmOgretmenDuzenle.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSinavNotlar.cs">
       <SubType>Form</SubType>
@@ -120,14 +120,14 @@
     <EmbeddedResource Include="FrmOgrenci.resx">
       <DependentUpon>FrmOgrenci.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciNotlar.resx">
-      <DependentUpon>FrmOgrenciNotlar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOgrenciPaneli.resx">
+      <DependentUpon>FrmOgrenciPaneli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgretmen.resx">
-      <DependentUpon>FrmOgretmen.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOgretmenPaneli.resx">
+      <DependentUpon>FrmOgretmenPaneli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgretmenler.resx">
-      <DependentUpon>FrmOgretmenler.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOgretmenDuzenle.resx">
+      <DependentUpon>FrmOgretmenDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSinavNotlar.resx">
       <DependentUpon>FrmSinavNotlar.cs</DependentUpon>

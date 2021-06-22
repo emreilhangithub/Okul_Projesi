@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Okul_Projesi
 {
-    public partial class FrmOgrenciNotlar : Form
+    public partial class FrmOgrenciPaneli : Form
     {
-        public FrmOgrenciNotlar()
+        public FrmOgrenciPaneli()
         {
             InitializeComponent();
         }
@@ -21,7 +15,7 @@ namespace Okul_Projesi
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-E9UTSVL;Initial Catalog=Okul;Integrated Security=True");
         public string numara;
 
-        private void FrmOgrenciNotlar_Load(object sender, EventArgs e)
+        private void FrmOgrenciPaneli_Load(object sender, EventArgs e)
         {
             //this.Text = numara; //formun textini numaraya eşitledik
 
@@ -32,6 +26,24 @@ namespace Okul_Projesi
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             
+        }
+
+        private void FrmOgrenciPaneli_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (MessageBox.Show("Kapatmak İstediginizden Emin Misiniz ?", "Ögrenci Notları",
+         MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+                Application.Exit();
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

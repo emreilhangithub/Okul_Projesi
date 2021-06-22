@@ -30,7 +30,7 @@ namespace Okul_Projesi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDersler));
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pctKapat = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -39,14 +39,14 @@ namespace Okul_Projesi
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.Txtid = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnListele = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.btnSil = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -55,16 +55,16 @@ namespace Okul_Projesi
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox6
+            // pctKapat
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(468, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(74, 48);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pctKapat.Image = ((System.Drawing.Image)(resources.GetObject("pctKapat.Image")));
+            this.pctKapat.Location = new System.Drawing.Point(468, 11);
+            this.pctKapat.Name = "pctKapat";
+            this.pctKapat.Size = new System.Drawing.Size(74, 48);
+            this.pctKapat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctKapat.TabIndex = 48;
+            this.pctKapat.TabStop = false;
+            this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
             // 
             // dataGridView1
             // 
@@ -73,6 +73,7 @@ namespace Okul_Projesi
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(10, 67);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(532, 207);
             this.dataGridView1.TabIndex = 47;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -123,6 +124,7 @@ namespace Okul_Projesi
             // 
             // Txtid
             // 
+            this.Txtid.Enabled = false;
             this.Txtid.Location = new System.Drawing.Point(197, 280);
             this.Txtid.Name = "Txtid";
             this.Txtid.Size = new System.Drawing.Size(294, 30);
@@ -138,16 +140,16 @@ namespace Okul_Projesi
             this.pictureBox4.TabIndex = 40;
             this.pictureBox4.TabStop = false;
             // 
-            // button3
+            // btnGuncelle
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(385, 352);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 48);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "GÜNCELLE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Location = new System.Drawing.Point(385, 352);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(151, 48);
+            this.btnGuncelle.TabIndex = 39;
+            this.btnGuncelle.Text = "GÜNCELLE";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // pictureBox2
             // 
@@ -159,16 +161,16 @@ namespace Okul_Projesi
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
+            // btnListele
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(116, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 48);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "LİSTELE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListele.Location = new System.Drawing.Point(116, 352);
+            this.btnListele.Name = "btnListele";
+            this.btnListele.Size = new System.Drawing.Size(151, 48);
+            this.btnListele.TabIndex = 37;
+            this.btnListele.Text = "LİSTELE";
+            this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // pictureBox1
             // 
@@ -180,16 +182,16 @@ namespace Okul_Projesi
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnEkle
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(116, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 48);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "EKLE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEkle.Location = new System.Drawing.Point(116, 415);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(151, 48);
+            this.btnEkle.TabIndex = 35;
+            this.btnEkle.Text = "EKLE";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // pictureBox3
             // 
@@ -201,16 +203,16 @@ namespace Okul_Projesi
             this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
-            // button5
+            // btnSil
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(385, 415);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(151, 48);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "SİL";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSil.Location = new System.Drawing.Point(385, 415);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(151, 48);
+            this.btnSil.TabIndex = 33;
+            this.btnSil.Text = "SİL";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // FrmDersler
             // 
@@ -218,7 +220,7 @@ namespace Okul_Projesi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(550, 474);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pctKapat);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
@@ -227,13 +229,13 @@ namespace Okul_Projesi
             this.Controls.Add(this.TxtAd);
             this.Controls.Add(this.Txtid);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnListele);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnSil);
             this.Font = new System.Drawing.Font("Corbel", 14F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -241,7 +243,7 @@ namespace Okul_Projesi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDersler";
             this.Load += new System.EventHandler(this.FrmDersler_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -255,7 +257,7 @@ namespace Okul_Projesi
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pctKapat;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -264,12 +266,12 @@ namespace Okul_Projesi
         private System.Windows.Forms.TextBox TxtAd;
         private System.Windows.Forms.TextBox Txtid;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSil;
     }
 }

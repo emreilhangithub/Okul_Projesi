@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -18,7 +12,7 @@ namespace Okul_Projesi
             InitializeComponent();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pctKapat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -52,20 +46,39 @@ namespace Okul_Projesi
            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnListele_Click(object sender, EventArgs e)
         {
             listele();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void BtnAra_Click(object sender, EventArgs e)
         {
+            if
+                (
+                string.IsNullOrEmpty(TxtAra.Text)
+                )
+            {
+                MessageBox.Show("Lütfen arama textboxı alanını eksiksiz doldurunuz");
+                return;
+            }
+
             dataGridView1.DataSource =  ds.OgrenciGetir(TxtAra.Text);
         }
 
         string c = "";//global yaptık güncellemede vs kullanmak için
 
-        private void button1_Click(object sender, EventArgs e)
-        {          
+        private void BtnEkle_Click(object sender, EventArgs e)
+        {
+
+            if
+                (
+                string.IsNullOrEmpty(TxtAd.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm ad alanını eksiksiz doldurunuz");
+                return;
+            }
+
             //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
             ds.OgrenciEkle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c);
             MessageBox.Show("Ekleme İşlemi başarılı");
@@ -79,6 +92,15 @@ namespace Okul_Projesi
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
+            if
+                (
+                string.IsNullOrEmpty(Txtid.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm id alanını eksiksiz doldurunuz");
+                return;
+            }
+
             ds.OgrenciSil(int.Parse(Txtid.Text));
             MessageBox.Show("Silme İşlemi başarılı");
             listele();
@@ -93,12 +115,12 @@ namespace Okul_Projesi
 
             if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() == "Kız")
             {
-                radioButton1.Checked = true;
+                rdBtnKiz.Checked = true;
             }
 
             if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() == "Erkek")
             {
-                radioButton2.Checked = true;
+                rdBtnErkek.Checked = true;
             }
 
             
@@ -107,23 +129,33 @@ namespace Okul_Projesi
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+
+            if
+                (
+                string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text)
+                )
+            {
+                MessageBox.Show("Lütfen ad ve id alanlarını eksiksiz doldurunuz");
+                return;
+            }
+
             ds.OgrenciGuncelle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c,int.Parse(Txtid.Text));
             MessageBox.Show("Güncelleme İşlemi başarılı");
             listele();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void rdBtnKiz_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked == true)
+            if (rdBtnKiz.Checked == true)
             {
                 c = "Kız";
             }
            
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void rdBtnErkek_CheckedChanged(object sender, EventArgs e)
         {            
-            if (radioButton2.Checked == true)
+            if (rdBtnErkek.Checked == true)
             {
                 c = "Erkek";
             }

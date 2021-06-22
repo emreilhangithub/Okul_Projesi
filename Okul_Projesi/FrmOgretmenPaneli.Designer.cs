@@ -1,7 +1,7 @@
 ﻿
 namespace Okul_Projesi
 {
-    partial class FrmOgretmen
+    partial class FrmOgretmenPaneli
     {
         /// <summary>
         /// Required designer variable.
@@ -29,78 +29,80 @@ namespace Okul_Projesi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgretmen));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgretmenPaneli));
+            this.btnDersIslemleri = new System.Windows.Forms.Button();
+            this.btnKulubIslemleri = new System.Windows.Forms.Button();
+            this.btnSinavNotlari = new System.Windows.Forms.Button();
+            this.btnOgretmenler = new System.Windows.Forms.Button();
+            this.btnOgrenciIslemleri = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pctKapat = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnDersIslemleri
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(125, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "DERS İŞLEMLERİ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDersIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDersIslemleri.Location = new System.Drawing.Point(125, 21);
+            this.btnDersIslemleri.Name = "btnDersIslemleri";
+            this.btnDersIslemleri.Size = new System.Drawing.Size(226, 50);
+            this.btnDersIslemleri.TabIndex = 0;
+            this.btnDersIslemleri.Text = "DERS İŞLEMLERİ";
+            this.btnDersIslemleri.UseVisualStyleBackColor = true;
+            this.btnDersIslemleri.Click += new System.EventHandler(this.btnDersIslemleri_Click);
             // 
-            // button2
+            // btnKulubIslemleri
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(125, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(198, 48);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "KULÜB İŞLEMLERİ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnKulubIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKulubIslemleri.Location = new System.Drawing.Point(125, 87);
+            this.btnKulubIslemleri.Name = "btnKulubIslemleri";
+            this.btnKulubIslemleri.Size = new System.Drawing.Size(226, 48);
+            this.btnKulubIslemleri.TabIndex = 1;
+            this.btnKulubIslemleri.Text = "KULÜB İŞLEMLERİ";
+            this.btnKulubIslemleri.UseVisualStyleBackColor = true;
+            this.btnKulubIslemleri.Click += new System.EventHandler(this.btnKulubIslemleri_Click);
             // 
-            // button3
+            // btnSinavNotlari
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(125, 153);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 48);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "SINAV NOTLARI";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSinavNotlari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSinavNotlari.Location = new System.Drawing.Point(125, 153);
+            this.btnSinavNotlari.Name = "btnSinavNotlari";
+            this.btnSinavNotlari.Size = new System.Drawing.Size(226, 48);
+            this.btnSinavNotlari.TabIndex = 2;
+            this.btnSinavNotlari.Text = "SINAV NOTLARI";
+            this.btnSinavNotlari.UseVisualStyleBackColor = true;
+            this.btnSinavNotlari.Click += new System.EventHandler(this.btnSinavNotlari_Click);
             // 
-            // button4
+            // btnOgretmenler
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(125, 219);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(198, 48);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "ÖGRETMENLER";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnOgretmenler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOgretmenler.Location = new System.Drawing.Point(125, 219);
+            this.btnOgretmenler.Name = "btnOgretmenler";
+            this.btnOgretmenler.Size = new System.Drawing.Size(226, 48);
+            this.btnOgretmenler.TabIndex = 3;
+            this.btnOgretmenler.Text = "ÖGRETMENLER";
+            this.btnOgretmenler.UseVisualStyleBackColor = true;
+            this.btnOgretmenler.Click += new System.EventHandler(this.btnOgretmenler_Click);
             // 
-            // button5
+            // btnOgrenciIslemleri
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(125, 285);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(198, 48);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ÖGRENCİ İŞLEMLERİ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnOgrenciIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOgrenciIslemleri.Location = new System.Drawing.Point(125, 285);
+            this.btnOgrenciIslemleri.Name = "btnOgrenciIslemleri";
+            this.btnOgrenciIslemleri.Size = new System.Drawing.Size(226, 48);
+            this.btnOgrenciIslemleri.TabIndex = 4;
+            this.btnOgrenciIslemleri.Text = "ÖGRENCİ İŞLEMLERİ";
+            this.btnOgrenciIslemleri.UseVisualStyleBackColor = true;
+            this.btnOgrenciIslemleri.Click += new System.EventHandler(this.btnOgrenciIslemleri_Click);
             // 
             // pictureBox1
             // 
@@ -111,7 +113,7 @@ namespace Okul_Projesi
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            //this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -153,48 +155,63 @@ namespace Okul_Projesi
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
-            // FrmOgretmen
+            // pctKapat
+            // 
+            this.pctKapat.Image = ((System.Drawing.Image)(resources.GetObject("pctKapat.Image")));
+            this.pctKapat.Location = new System.Drawing.Point(357, 3);
+            this.pctKapat.Name = "pctKapat";
+            this.pctKapat.Size = new System.Drawing.Size(74, 48);
+            this.pctKapat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctKapat.TabIndex = 74;
+            this.pctKapat.TabStop = false;
+            this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
+            // 
+            // FrmOgretmenPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(350, 348);
+            this.ClientSize = new System.Drawing.Size(434, 348);
+            this.Controls.Add(this.pctKapat);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOgrenciIslemleri);
+            this.Controls.Add(this.btnOgretmenler);
+            this.Controls.Add(this.btnSinavNotlari);
+            this.Controls.Add(this.btnKulubIslemleri);
+            this.Controls.Add(this.btnDersIslemleri);
             this.Font = new System.Drawing.Font("Corbel", 14F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmOgretmen";
+            this.Name = "FrmOgretmenPaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOgretmen";
+            this.Load += new System.EventHandler(this.FrmOgretmenPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDersIslemleri;
+        private System.Windows.Forms.Button btnKulubIslemleri;
+        private System.Windows.Forms.Button btnSinavNotlari;
+        private System.Windows.Forms.Button btnOgretmenler;
+        private System.Windows.Forms.Button btnOgrenciIslemleri;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pctKapat;
     }
 }

@@ -30,7 +30,7 @@ namespace Okul_Projesi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pctKapat = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -48,8 +48,8 @@ namespace Okul_Projesi
             this.BtnListele = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.CmbKulup = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdBtnErkek = new System.Windows.Forms.RadioButton();
+            this.rdBtnKiz = new System.Windows.Forms.RadioButton();
             this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.Txtid = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@ namespace Okul_Projesi
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
@@ -70,16 +70,16 @@ namespace Okul_Projesi
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox6
+            // pctKapat
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(574, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(74, 48);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 64;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pctKapat.Image = ((System.Drawing.Image)(resources.GetObject("pctKapat.Image")));
+            this.pctKapat.Location = new System.Drawing.Point(574, 12);
+            this.pctKapat.Name = "pctKapat";
+            this.pctKapat.Size = new System.Drawing.Size(74, 48);
+            this.pctKapat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctKapat.TabIndex = 64;
+            this.pctKapat.TabStop = false;
+            this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
             // 
             // dataGridView1
             // 
@@ -156,7 +156,7 @@ namespace Okul_Projesi
             this.BtnAra.TabIndex = 82;
             this.BtnAra.Text = "ARA";
             this.BtnAra.UseVisualStyleBackColor = true;
-            this.BtnAra.Click += new System.EventHandler(this.button5_Click);
+            this.BtnAra.Click += new System.EventHandler(this.BtnAra_Click);
             // 
             // pictureBox4
             // 
@@ -219,7 +219,7 @@ namespace Okul_Projesi
             this.BtnEkle.TabIndex = 76;
             this.BtnEkle.Text = "EKLE";
             this.BtnEkle.UseVisualStyleBackColor = true;
-            this.BtnEkle.Click += new System.EventHandler(this.button1_Click);
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // pictureBox2
             // 
@@ -240,13 +240,13 @@ namespace Okul_Projesi
             this.BtnListele.TabIndex = 74;
             this.BtnListele.Text = "LİSTELE";
             this.BtnListele.UseVisualStyleBackColor = true;
-            this.BtnListele.Click += new System.EventHandler(this.button2_Click);
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.CmbKulup);
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.rdBtnErkek);
+            this.panel2.Controls.Add(this.rdBtnKiz);
             this.panel2.Controls.Add(this.TxtSoyad);
             this.panel2.Controls.Add(this.TxtAd);
             this.panel2.Controls.Add(this.Txtid);
@@ -270,29 +270,29 @@ namespace Okul_Projesi
             this.CmbKulup.TabIndex = 91;
             this.CmbKulup.SelectedIndexChanged += new System.EventHandler(this.CmbKulup_SelectedIndexChanged);
             // 
-            // radioButton2
+            // rdBtnErkek
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(209, 152);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 27);
-            this.radioButton2.TabIndex = 90;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Erkek";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rdBtnErkek.AutoSize = true;
+            this.rdBtnErkek.Location = new System.Drawing.Point(209, 152);
+            this.rdBtnErkek.Name = "rdBtnErkek";
+            this.rdBtnErkek.Size = new System.Drawing.Size(71, 27);
+            this.rdBtnErkek.TabIndex = 90;
+            this.rdBtnErkek.TabStop = true;
+            this.rdBtnErkek.Text = "Erkek";
+            this.rdBtnErkek.UseVisualStyleBackColor = true;
+            this.rdBtnErkek.CheckedChanged += new System.EventHandler(this.rdBtnErkek_CheckedChanged);
             // 
-            // radioButton1
+            // rdBtnKiz
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(132, 152);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 27);
-            this.radioButton1.TabIndex = 89;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Kız";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdBtnKiz.AutoSize = true;
+            this.rdBtnKiz.Location = new System.Drawing.Point(132, 152);
+            this.rdBtnKiz.Name = "rdBtnKiz";
+            this.rdBtnKiz.Size = new System.Drawing.Size(52, 27);
+            this.rdBtnKiz.TabIndex = 89;
+            this.rdBtnKiz.TabStop = true;
+            this.rdBtnKiz.Text = "Kız";
+            this.rdBtnKiz.UseVisualStyleBackColor = true;
+            this.rdBtnKiz.CheckedChanged += new System.EventHandler(this.rdBtnKiz_CheckedChanged);
             // 
             // TxtSoyad
             // 
@@ -368,7 +368,7 @@ namespace Okul_Projesi
             this.ClientSize = new System.Drawing.Size(660, 474);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pctKapat);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
@@ -379,7 +379,7 @@ namespace Okul_Projesi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOgrenci";
             this.Load += new System.EventHandler(this.FrmOgrenci_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -398,7 +398,7 @@ namespace Okul_Projesi
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pctKapat;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -423,8 +423,8 @@ namespace Okul_Projesi
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdBtnErkek;
+        private System.Windows.Forms.RadioButton rdBtnKiz;
         private System.Windows.Forms.ComboBox CmbKulup;
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Okul_Projesi
@@ -17,19 +10,33 @@ namespace Okul_Projesi
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnOgrenciGirisi_Click(object sender, EventArgs e)
         {
-            FrmOgrenciNotlar fr = new FrmOgrenciNotlar();
-            fr.numara = textBox1.Text;
+            if
+                (
+                string.IsNullOrEmpty(txtOgrenciNumarasi.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Ögrenci Numarasını Giriniz");
+                return;
+            }
+            FrmOgrenciPaneli fr = new FrmOgrenciPaneli();
+            fr.numara = txtOgrenciNumarasi.Text;
             fr.Show();
+            this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOgretmenGirisi_Click(object sender, EventArgs e)
         {            
-            FrmOgretmen fr = new FrmOgretmen();
+            FrmOgretmenPaneli fr = new FrmOgretmenPaneli();
             fr.Show();
             this.Hide();
 
+        }
+
+        private void pctKapat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

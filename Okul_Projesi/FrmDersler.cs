@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Okul_Projesi
@@ -26,28 +19,56 @@ namespace Okul_Projesi
                 //datagrid viewin veri kaynagını dsden gelen ders nesnesini verdik
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEkle_Click(object sender, EventArgs e)
         {
+            if
+               (
+               string.IsNullOrEmpty(TxtAd.Text)
+               )
+            {
+                MessageBox.Show("Lütfen Ad Alanını eksiksiz doldurunuz");
+                return;
+            }
+
             ds.DersEkle(TxtAd.Text);
             MessageBox.Show("Ders Ekleme İşlemi Yapılmıştır");
             dataGridView1.DataSource = ds.DersListesi();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnListele_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ds.DersListesi();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnSil_Click(object sender, EventArgs e)
         {
+            if
+              (
+              string.IsNullOrEmpty(Txtid.Text)
+              )
+            {
+                MessageBox.Show("Lütfen id Alanını eksiksiz doldurunuz");
+                return;
+            }
+
             //biz string tanımladık ama bizden byte istiyor
             ds.DersSil(byte.Parse(Txtid.Text));
             MessageBox.Show("Ders Silme İşlemi Yapılmıştır");
             dataGridView1.DataSource = ds.DersListesi();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnGuncelle_Click(object sender, EventArgs e)
         {
+
+            if
+                (
+                string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
+                return;
+            }
+
             ds.DersGuncelle(TxtAd.Text,byte.Parse(Txtid.Text));
             MessageBox.Show("Ders Güncelleme İşlemi Yapılmıştır");
             dataGridView1.DataSource = ds.DersListesi();
@@ -60,7 +81,7 @@ namespace Okul_Projesi
             TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pctKapat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

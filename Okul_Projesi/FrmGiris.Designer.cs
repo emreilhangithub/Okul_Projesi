@@ -30,46 +30,48 @@ namespace Okul_Projesi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGiris));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnOgretmenGirisi = new System.Windows.Forms.Button();
+            this.btnOgrenciGirisi = new System.Windows.Forms.Button();
+            this.txtOgrenciNumarasi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pctKapat = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnOgretmenGirisi
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(39, 32);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 220);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOgretmenGirisi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOgretmenGirisi.BackgroundImage")));
+            this.btnOgretmenGirisi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOgretmenGirisi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOgretmenGirisi.Location = new System.Drawing.Point(43, 32);
+            this.btnOgretmenGirisi.Margin = new System.Windows.Forms.Padding(5);
+            this.btnOgretmenGirisi.Name = "btnOgretmenGirisi";
+            this.btnOgretmenGirisi.Size = new System.Drawing.Size(231, 220);
+            this.btnOgretmenGirisi.TabIndex = 0;
+            this.btnOgretmenGirisi.UseVisualStyleBackColor = true;
+            this.btnOgretmenGirisi.Click += new System.EventHandler(this.btnOgretmenGirisi_Click);
             // 
-            // button2
+            // btnOgrenciGirisi
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(351, 32);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(260, 220);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnOgrenciGirisi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOgrenciGirisi.BackgroundImage")));
+            this.btnOgrenciGirisi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOgrenciGirisi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOgrenciGirisi.Location = new System.Drawing.Point(351, 32);
+            this.btnOgrenciGirisi.Margin = new System.Windows.Forms.Padding(5);
+            this.btnOgrenciGirisi.Name = "btnOgrenciGirisi";
+            this.btnOgrenciGirisi.Size = new System.Drawing.Size(260, 220);
+            this.btnOgrenciGirisi.TabIndex = 1;
+            this.btnOgrenciGirisi.UseVisualStyleBackColor = true;
+            this.btnOgrenciGirisi.Click += new System.EventHandler(this.btnOgrenciGirisi_Click);
             // 
-            // textBox1
+            // txtOgrenciNumarasi
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(210, 293);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(362, 30);
-            this.textBox1.TabIndex = 2;
+            this.txtOgrenciNumarasi.BackColor = System.Drawing.SystemColors.Info;
+            this.txtOgrenciNumarasi.Location = new System.Drawing.Point(210, 293);
+            this.txtOgrenciNumarasi.Margin = new System.Windows.Forms.Padding(5);
+            this.txtOgrenciNumarasi.Name = "txtOgrenciNumarasi";
+            this.txtOgrenciNumarasi.Size = new System.Drawing.Size(362, 30);
+            this.txtOgrenciNumarasi.TabIndex = 2;
             // 
             // label1
             // 
@@ -81,22 +83,35 @@ namespace Okul_Projesi
             this.label1.TabIndex = 3;
             this.label1.Text = "Numara:";
             // 
+            // pctKapat
+            // 
+            this.pctKapat.Image = ((System.Drawing.Image)(resources.GetObject("pctKapat.Image")));
+            this.pctKapat.Location = new System.Drawing.Point(604, 1);
+            this.pctKapat.Name = "pctKapat";
+            this.pctKapat.Size = new System.Drawing.Size(36, 23);
+            this.pctKapat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctKapat.TabIndex = 74;
+            this.pctKapat.TabStop = false;
+            this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
+            // 
             // FrmGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(643, 348);
+            this.Controls.Add(this.pctKapat);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtOgrenciNumarasi);
+            this.Controls.Add(this.btnOgrenciGirisi);
+            this.Controls.Add(this.btnOgretmenGirisi);
             this.Font = new System.Drawing.Font("Corbel", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pctKapat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,10 +119,11 @@ namespace Okul_Projesi
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnOgretmenGirisi;
+        private System.Windows.Forms.Button btnOgrenciGirisi;
+        private System.Windows.Forms.TextBox txtOgrenciNumarasi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pctKapat;
     }
 }
 
