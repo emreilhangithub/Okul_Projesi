@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Okul_Projesi.DataAccess;
 
 namespace Okul_Projesi
 {
@@ -12,13 +13,15 @@ namespace Okul_Projesi
             InitializeComponent();
         }
 
+        SqlConnection baglanti = null;
+        Connection connection = new Connection();
+        DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
+
         private void pctKapat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-E9UTSVL;Initial Catalog=Okul;Integrated Security=True");
 
         public void listele()
         {
@@ -28,22 +31,27 @@ namespace Okul_Projesi
 
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
-            listele();
-            
-            baglanti.Open();
 
-            SqlCommand komut = new SqlCommand("Select * from TBLKULUPLER",baglanti);          
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            CmbKulup.DisplayMember = "KULUPAD";  //gozukecek isim
-            CmbKulup.ValueMember = "KULUPID"; //arkadagizli olan id
-            CmbKulup.DataSource = dt;
-
-            baglanti.Close(); //sql data adapterde baglantıyı acıp kapatmaya gerek yok
-
-            
-           
+            try
+            {
+                listele();
+                baglanti = connection.GetConnection();
+                SqlCommand komut = new SqlCommand("Select * from TBLKULUPLER", baglanti);
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                CmbKulup.DisplayMember = "KULUPAD";  //gozukecek isim
+                CmbKulup.ValueMember = "KULUPID"; //arkadagizli olan id
+                CmbKulup.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                baglanti.Close(); // Bağlantıyı kapat
+            }
         }
 
         private void BtnListele_Click(object sender, EventArgs e)
@@ -53,16 +61,13 @@ namespace Okul_Projesi
 
         private void BtnAra_Click(object sender, EventArgs e)
         {
-            if
-                (
-                string.IsNullOrEmpty(TxtAra.Text)
-                )
+            if (string.IsNullOrEmpty(TxtAra.Text))
             {
                 MessageBox.Show("Lütfen arama textboxı alanını eksiksiz doldurunuz");
                 return;
             }
 
-            dataGridView1.DataSource =  ds.OgrenciGetir(TxtAra.Text);
+            dataGridView1.DataSource = ds.OgrenciGetir(TxtAra.Text);
         }
 
         string c = "";//global yaptık güncellemede vs kullanmak için
@@ -70,17 +75,14 @@ namespace Okul_Projesi
         private void BtnEkle_Click(object sender, EventArgs e)
         {
 
-            if
-                (
-                string.IsNullOrEmpty(TxtAd.Text)
-                )
+            if (string.IsNullOrEmpty(TxtAd.Text))
             {
                 MessageBox.Show("Lütfen Tüm ad alanını eksiksiz doldurunuz");
                 return;
             }
 
             //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
-            ds.OgrenciEkle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c);
+            ds.OgrenciEkle(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.SelectedValue.ToString()), c, TxtSifre.Text);
             MessageBox.Show("Ekleme İşlemi başarılı");
             listele();
         }
@@ -92,10 +94,7 @@ namespace Okul_Projesi
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            if
-                (
-                string.IsNullOrEmpty(Txtid.Text)
-                )
+            if (string.IsNullOrEmpty(Txtid.Text))
             {
                 MessageBox.Show("Lütfen Tüm id alanını eksiksiz doldurunuz");
                 return;
@@ -111,6 +110,7 @@ namespace Okul_Projesi
             Txtid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             TxtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            TxtSifre.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             CmbKulup.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
             if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() == "Kız")
@@ -123,7 +123,7 @@ namespace Okul_Projesi
                 rdBtnErkek.Checked = true;
             }
 
-            
+
 
         }
 
@@ -139,7 +139,7 @@ namespace Okul_Projesi
                 return;
             }
 
-            ds.OgrenciGuncelle(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),c,int.Parse(Txtid.Text));
+            ds.OgrenciGuncelle(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.SelectedValue.ToString()), c, TxtSifre.Text, int.Parse(Txtid.Text));
             MessageBox.Show("Güncelleme İşlemi başarılı");
             listele();
         }
@@ -150,11 +150,11 @@ namespace Okul_Projesi
             {
                 c = "Kız";
             }
-           
+
         }
 
         private void rdBtnErkek_CheckedChanged(object sender, EventArgs e)
-        {            
+        {
             if (rdBtnErkek.Checked == true)
             {
                 c = "Erkek";

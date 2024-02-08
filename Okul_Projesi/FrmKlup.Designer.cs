@@ -150,7 +150,7 @@ namespace Okul_Projesi
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 23);
             this.label1.TabIndex = 26;
-            this.label1.Text = "KULUP ID:";
+            this.label1.Text = "KULÜP ID:";
             // 
             // label2
             // 
@@ -159,7 +159,7 @@ namespace Okul_Projesi
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 23);
             this.label2.TabIndex = 27;
-            this.label2.Text = "KULUP ADI:";
+            this.label2.Text = "KULÜP ADI:";
             // 
             // pictureBox5
             // 
@@ -178,7 +178,7 @@ namespace Okul_Projesi
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(188, 23);
             this.label3.TabIndex = 29;
-            this.label3.Text = "KULUP İŞLEM PANELİ";
+            this.label3.Text = "KULÜP İŞLEM PANELİ";
             // 
             // dataGridView1
             // 

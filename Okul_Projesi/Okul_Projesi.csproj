@@ -53,7 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\Connection.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -94,11 +103,11 @@
     <Compile Include="FrmOgretmenPaneli.Designer.cs">
       <DependentUpon>FrmOgretmenPaneli.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgretmenDuzenle.cs">
+    <Compile Include="FrmOgretmen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgretmenDuzenle.Designer.cs">
-      <DependentUpon>FrmOgretmenDuzenle.cs</DependentUpon>
+    <Compile Include="FrmOgretmen.Designer.cs">
+      <DependentUpon>FrmOgretmen.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSinavNotlar.cs">
       <SubType>Form</SubType>
@@ -126,8 +135,8 @@
     <EmbeddedResource Include="FrmOgretmenPaneli.resx">
       <DependentUpon>FrmOgretmenPaneli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgretmenDuzenle.resx">
-      <DependentUpon>FrmOgretmenDuzenle.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOgretmen.resx">
+      <DependentUpon>FrmOgretmen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSinavNotlar.resx">
       <DependentUpon>FrmSinavNotlar.cs</DependentUpon>
@@ -148,7 +157,7 @@
     <None Include="DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>

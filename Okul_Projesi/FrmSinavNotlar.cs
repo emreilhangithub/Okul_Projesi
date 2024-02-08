@@ -46,10 +46,7 @@ namespace Okul_Projesi
 
         private void BtnAra_Click(object sender, EventArgs e)
         {
-            if
-                (
-                string.IsNullOrEmpty(Txtid.Text)
-                )
+            if (string.IsNullOrEmpty(Txtid.Text))
             {
                 MessageBox.Show("Lütfen id alanını eksiksiz doldurunuz");
                 return;
@@ -57,7 +54,7 @@ namespace Okul_Projesi
 
             aramaTemzile();
             aramaYap();
-            
+
         }
 
         private void pctKapat_Click(object sender, EventArgs e)
@@ -101,14 +98,11 @@ namespace Okul_Projesi
 
         private void BtnHesapla_Click(object sender, EventArgs e)
         {
-            if
-                 (
-                 string.IsNullOrEmpty(TxtSinav1.Text) || string.IsNullOrEmpty(TxtSinav2.Text) || string.IsNullOrEmpty(TxtSinav3.Text) || string.IsNullOrEmpty(TxtProje.Text)
-                 )
+            if (string.IsNullOrEmpty(TxtSinav1.Text) || string.IsNullOrEmpty(TxtSinav2.Text) || string.IsNullOrEmpty(TxtSinav3.Text) || string.IsNullOrEmpty(TxtProje.Text))
             {
                 MessageBox.Show("Lütfen Sınav notu ve proje alanları eksiksiz doldurunuz");
                 return;
-            }          
+            }
 
 
             //string durum;
@@ -118,14 +112,14 @@ namespace Okul_Projesi
             sinav3 = Convert.ToInt16(TxtSinav3.Text);
             proje = Convert.ToInt16(TxtProje.Text);
 
-            if (sinav1 < 0 || sinav1>100 || sinav2 < 0 || sinav2 > 100 || sinav3 < 0 || sinav3 > 100 || proje < 0 || proje > 100)
+            if (sinav1 < 0 || sinav1 > 100 || sinav2 < 0 || sinav2 > 100 || sinav3 < 0 || sinav3 > 100 || proje < 0 || proje > 100)
             {
                 MessageBox.Show("Lütfen sınav notunu  ve proje notunu 1-100 arasında giriniz");
                 return;
             }
 
 
-                ortlama = (sinav1 + sinav2 + sinav3 + proje) / 4;
+            ortlama = (sinav1 + sinav2 + sinav3 + proje) / 4;
             TxtOrtalama.Text = ortlama.ToString();
             if (ortlama >= 50)
             {
@@ -139,11 +133,7 @@ namespace Okul_Projesi
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            if
-                (
-                string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtSinav1.Text) || string.IsNullOrEmpty(TxtSinav2.Text) || string.IsNullOrEmpty(TxtSinav3.Text)
-                || string.IsNullOrEmpty(TxtProje.Text) || string.IsNullOrEmpty(TxtOrtalama.Text) || string.IsNullOrEmpty(TxtDurum.Text)
-                )
+            if (string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtSinav1.Text) || string.IsNullOrEmpty(TxtSinav2.Text) || string.IsNullOrEmpty(TxtSinav3.Text) || string.IsNullOrEmpty(TxtProje.Text) || string.IsNullOrEmpty(TxtOrtalama.Text) || string.IsNullOrEmpty(TxtDurum.Text))
             {
                 MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
                 return;

@@ -2,6 +2,8 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Okul_Projesi.DataAccess;
+using System.Drawing;
 
 namespace Okul_Projesi
 {
@@ -12,20 +14,31 @@ namespace Okul_Projesi
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-E9UTSVL;Initial Catalog=Okul;Integrated Security=True");
+        SqlConnection baglanti = null;
+        Connection connection = new Connection();
         public string numara;
 
         private void FrmOgrenciPaneli_Load(object sender, EventArgs e)
         {
-            //this.Text = numara; //formun textini numaraya eşitledik
-
-            SqlCommand komut = new SqlCommand("SELECT NOTID,DERSAD,SINAV1,SINAV2,SINAV3,PROJE,ORTALAMA,DURUM FROM TBLNOTLAR INNER JOIN TBLDERSLER ON TBLNOTLAR.DERSID = TBLDERSLER.DERSID WHERE OGRID = @p1",baglanti);
-            komut.Parameters.AddWithValue("@p1",numara);           
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            
+            try
+            {
+                //this.Text = numara; //formun textini numaraya eşitledik
+                baglanti = connection.GetConnection();
+                SqlCommand komut = new SqlCommand("SELECT NOTID,DERSAD,SINAV1,SINAV2,SINAV3,PROJE,ORTALAMA,DURUM FROM TBLNOTLAR INNER JOIN TBLDERSLER ON TBLNOTLAR.DERSID = TBLDERSLER.DERSID WHERE OGRID = @p1", baglanti);
+                komut.Parameters.AddWithValue("@p1", numara);
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                baglanti.Close(); // Hata olsa da olmasa da bağlantıyı kapat
+            }
         }
 
         private void FrmOgrenciPaneli_FormClosing(object sender, FormClosingEventArgs e)

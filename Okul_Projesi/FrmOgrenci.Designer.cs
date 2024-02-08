@@ -47,6 +47,8 @@ namespace Okul_Projesi
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnListele = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TxtSifre = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.CmbKulup = new System.Windows.Forms.ComboBox();
             this.rdBtnErkek = new System.Windows.Forms.RadioButton();
             this.rdBtnKiz = new System.Windows.Forms.RadioButton();
@@ -127,7 +129,7 @@ namespace Okul_Projesi
             this.panel1.Controls.Add(this.BtnListele);
             this.panel1.Location = new System.Drawing.Point(9, 280);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 190);
+            this.panel1.Size = new System.Drawing.Size(350, 240);
             this.panel1.TabIndex = 65;
             // 
             // TxtAra
@@ -244,6 +246,8 @@ namespace Okul_Projesi
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.TxtSifre);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.CmbKulup);
             this.panel2.Controls.Add(this.rdBtnErkek);
             this.panel2.Controls.Add(this.rdBtnKiz);
@@ -257,14 +261,30 @@ namespace Okul_Projesi
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(365, 280);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 190);
+            this.panel2.Size = new System.Drawing.Size(283, 240);
             this.panel2.TabIndex = 66;
+            // 
+            // TxtSifre
+            // 
+            this.TxtSifre.Location = new System.Drawing.Point(116, 129);
+            this.TxtSifre.Name = "TxtSifre";
+            this.TxtSifre.Size = new System.Drawing.Size(164, 30);
+            this.TxtSifre.TabIndex = 93;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(53, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 23);
+            this.label7.TabIndex = 92;
+            this.label7.Text = "ŞİFRE:";
             // 
             // CmbKulup
             // 
             this.CmbKulup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbKulup.FormattingEnabled = true;
-            this.CmbKulup.Location = new System.Drawing.Point(116, 118);
+            this.CmbKulup.Location = new System.Drawing.Point(116, 165);
             this.CmbKulup.Name = "CmbKulup";
             this.CmbKulup.Size = new System.Drawing.Size(164, 31);
             this.CmbKulup.TabIndex = 91;
@@ -273,7 +293,7 @@ namespace Okul_Projesi
             // rdBtnErkek
             // 
             this.rdBtnErkek.AutoSize = true;
-            this.rdBtnErkek.Location = new System.Drawing.Point(209, 152);
+            this.rdBtnErkek.Location = new System.Drawing.Point(209, 202);
             this.rdBtnErkek.Name = "rdBtnErkek";
             this.rdBtnErkek.Size = new System.Drawing.Size(71, 27);
             this.rdBtnErkek.TabIndex = 90;
@@ -285,7 +305,7 @@ namespace Okul_Projesi
             // rdBtnKiz
             // 
             this.rdBtnKiz.AutoSize = true;
-            this.rdBtnKiz.Location = new System.Drawing.Point(132, 152);
+            this.rdBtnKiz.Location = new System.Drawing.Point(132, 202);
             this.rdBtnKiz.Name = "rdBtnKiz";
             this.rdBtnKiz.Size = new System.Drawing.Size(52, 27);
             this.rdBtnKiz.TabIndex = 89;
@@ -296,7 +316,7 @@ namespace Okul_Projesi
             // 
             // TxtSoyad
             // 
-            this.TxtSoyad.Location = new System.Drawing.Point(116, 85);
+            this.TxtSoyad.Location = new System.Drawing.Point(116, 87);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(164, 30);
             this.TxtSoyad.TabIndex = 87;
@@ -318,7 +338,7 @@ namespace Okul_Projesi
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 159);
+            this.label6.Location = new System.Drawing.Point(27, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 23);
             this.label6.TabIndex = 4;
@@ -327,16 +347,16 @@ namespace Okul_Projesi
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 126);
+            this.label5.Location = new System.Drawing.Point(27, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 23);
             this.label5.TabIndex = 3;
-            this.label5.Text = "KULUBU:";
+            this.label5.Text = "KULÜBÜ:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 92);
+            this.label4.Location = new System.Drawing.Point(43, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 23);
             this.label4.TabIndex = 2;
@@ -365,7 +385,7 @@ namespace Okul_Projesi
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(660, 474);
+            this.ClientSize = new System.Drawing.Size(660, 529);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pctKapat);
@@ -426,5 +446,7 @@ namespace Okul_Projesi
         private System.Windows.Forms.RadioButton rdBtnErkek;
         private System.Windows.Forms.RadioButton rdBtnKiz;
         private System.Windows.Forms.ComboBox CmbKulup;
+        private System.Windows.Forms.TextBox TxtSifre;
+        private System.Windows.Forms.Label label7;
     }
 }

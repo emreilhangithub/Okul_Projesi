@@ -40,7 +40,7 @@ namespace Okul_Projesi
 
         private void btnOgretmenler_Click(object sender, EventArgs e)
         {
-            FrmOgretmenDuzenle fr = new FrmOgretmenDuzenle();
+            FrmOgretmen fr = new FrmOgretmen();
             fr.Show();
             this.Hide();
         }

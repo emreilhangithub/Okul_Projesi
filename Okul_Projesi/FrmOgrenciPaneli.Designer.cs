@@ -42,17 +42,17 @@ namespace Okul_Projesi
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1054, 462);
+            this.dataGridView1.Size = new System.Drawing.Size(1352, 462);
             this.dataGridView1.TabIndex = 0;
             // 
-            // FrmOgrenciNotlar
+            // FrmOgrenciPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 462);
+            this.ClientSize = new System.Drawing.Size(1352, 462);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmOgrenciNotlar";
+            this.Name = "FrmOgrenciPaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notlar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmOgrenciPaneli_FormClosing);

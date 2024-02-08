@@ -14,17 +14,14 @@ namespace Okul_Projesi
 
         private void FrmDersler_Load(object sender, EventArgs e)
         {
-          
+
             dataGridView1.DataSource = ds.DersListesi();
-                //datagrid viewin veri kaynagını dsden gelen ders nesnesini verdik
+            //datagrid viewin veri kaynagını dsden gelen ders nesnesini verdik
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            if
-               (
-               string.IsNullOrEmpty(TxtAd.Text)
-               )
+            if (string.IsNullOrEmpty(TxtAd.Text))
             {
                 MessageBox.Show("Lütfen Ad Alanını eksiksiz doldurunuz");
                 return;
@@ -42,10 +39,7 @@ namespace Okul_Projesi
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if
-              (
-              string.IsNullOrEmpty(Txtid.Text)
-              )
+            if (string.IsNullOrEmpty(Txtid.Text))
             {
                 MessageBox.Show("Lütfen id Alanını eksiksiz doldurunuz");
                 return;
@@ -60,16 +54,13 @@ namespace Okul_Projesi
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
 
-            if
-                (
-                string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text)
-                )
+            if (string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text))
             {
                 MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
                 return;
             }
 
-            ds.DersGuncelle(TxtAd.Text,byte.Parse(Txtid.Text));
+            ds.DersGuncelle(TxtAd.Text, byte.Parse(Txtid.Text));
             MessageBox.Show("Ders Güncelleme İşlemi Yapılmıştır");
             dataGridView1.DataSource = ds.DersListesi();
         }
