@@ -40,7 +40,7 @@ Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://g
 Güncelleme butonuna basarsa ögrencinin var olan notlarını günceller.
 
 
-![SinavNotPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/SinavNotPaneli.png)
+![SinavNotGetir](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/SinavNotGetir.png)
 
 
 ### Öğretmen İşlem Paneli
