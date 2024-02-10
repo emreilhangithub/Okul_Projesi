@@ -12,7 +12,7 @@ namespace Okul_Projesi
 
         private void btnKulubIslemleri_Click(object sender, EventArgs e)
         {
-            FrmKlup fr = new FrmKlup();
+            FrmKulup fr = new FrmKulup();
             fr.Show();
             this.Hide();
         }

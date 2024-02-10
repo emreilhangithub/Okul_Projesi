@@ -79,11 +79,11 @@
     <Compile Include="FrmGiris.Designer.cs">
       <DependentUpon>FrmGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmKlup.cs">
+    <Compile Include="FrmKulup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmKlup.Designer.cs">
-      <DependentUpon>FrmKlup.cs</DependentUpon>
+    <Compile Include="FrmKulup.Designer.cs">
+      <DependentUpon>FrmKulup.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmOgrenci.cs">
       <SubType>Form</SubType>
@@ -123,8 +123,8 @@
     <EmbeddedResource Include="FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmKlup.resx">
-      <DependentUpon>FrmKlup.cs</DependentUpon>
+    <EmbeddedResource Include="FrmKulup.resx">
+      <DependentUpon>FrmKulup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOgrenci.resx">
       <DependentUpon>FrmOgrenci.cs</DependentUpon>

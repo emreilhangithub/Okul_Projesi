@@ -100,7 +100,7 @@ namespace Okul_Projesi
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(89, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 23);
+            this.label3.Size = new System.Drawing.Size(306, 35);
             this.label3.TabIndex = 62;
             this.label3.Text = "ÖGRENCİ İŞLEM PANELİ";
             // 
@@ -136,7 +136,7 @@ namespace Okul_Projesi
             // 
             this.TxtAra.Location = new System.Drawing.Point(7, 134);
             this.TxtAra.Name = "TxtAra";
-            this.TxtAra.Size = new System.Drawing.Size(164, 30);
+            this.TxtAra.Size = new System.Drawing.Size(164, 42);
             this.TxtAra.TabIndex = 84;
             // 
             // pictureBox7
@@ -268,7 +268,7 @@ namespace Okul_Projesi
             // 
             this.TxtSifre.Location = new System.Drawing.Point(116, 129);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(164, 30);
+            this.TxtSifre.Size = new System.Drawing.Size(164, 42);
             this.TxtSifre.TabIndex = 93;
             // 
             // label7
@@ -276,7 +276,7 @@ namespace Okul_Projesi
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(53, 136);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 23);
+            this.label7.Size = new System.Drawing.Size(90, 35);
             this.label7.TabIndex = 92;
             this.label7.Text = "ŞİFRE:";
             // 
@@ -286,7 +286,7 @@ namespace Okul_Projesi
             this.CmbKulup.FormattingEnabled = true;
             this.CmbKulup.Location = new System.Drawing.Point(116, 165);
             this.CmbKulup.Name = "CmbKulup";
-            this.CmbKulup.Size = new System.Drawing.Size(164, 31);
+            this.CmbKulup.Size = new System.Drawing.Size(164, 43);
             this.CmbKulup.TabIndex = 91;
             this.CmbKulup.SelectedIndexChanged += new System.EventHandler(this.CmbKulup_SelectedIndexChanged);
             // 
@@ -295,7 +295,7 @@ namespace Okul_Projesi
             this.rdBtnErkek.AutoSize = true;
             this.rdBtnErkek.Location = new System.Drawing.Point(209, 202);
             this.rdBtnErkek.Name = "rdBtnErkek";
-            this.rdBtnErkek.Size = new System.Drawing.Size(71, 27);
+            this.rdBtnErkek.Size = new System.Drawing.Size(105, 39);
             this.rdBtnErkek.TabIndex = 90;
             this.rdBtnErkek.TabStop = true;
             this.rdBtnErkek.Text = "Erkek";
@@ -307,7 +307,7 @@ namespace Okul_Projesi
             this.rdBtnKiz.AutoSize = true;
             this.rdBtnKiz.Location = new System.Drawing.Point(132, 202);
             this.rdBtnKiz.Name = "rdBtnKiz";
-            this.rdBtnKiz.Size = new System.Drawing.Size(52, 27);
+            this.rdBtnKiz.Size = new System.Drawing.Size(76, 39);
             this.rdBtnKiz.TabIndex = 89;
             this.rdBtnKiz.TabStop = true;
             this.rdBtnKiz.Text = "Kız";
@@ -318,21 +318,21 @@ namespace Okul_Projesi
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(116, 87);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(164, 30);
+            this.TxtSoyad.Size = new System.Drawing.Size(164, 42);
             this.TxtSoyad.TabIndex = 87;
             // 
             // TxtAd
             // 
             this.TxtAd.Location = new System.Drawing.Point(116, 51);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(164, 30);
+            this.TxtAd.Size = new System.Drawing.Size(164, 42);
             this.TxtAd.TabIndex = 86;
             // 
             // Txtid
             // 
             this.Txtid.Location = new System.Drawing.Point(116, 15);
             this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(164, 30);
+            this.Txtid.Size = new System.Drawing.Size(164, 42);
             this.Txtid.TabIndex = 85;
             // 
             // label6
@@ -340,7 +340,7 @@ namespace Okul_Projesi
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(27, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 23);
+            this.label6.Size = new System.Drawing.Size(134, 35);
             this.label6.TabIndex = 4;
             this.label6.Text = "CİNSİYET:";
             // 
@@ -349,7 +349,7 @@ namespace Okul_Projesi
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(27, 173);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 23);
+            this.label5.Size = new System.Drawing.Size(128, 35);
             this.label5.TabIndex = 3;
             this.label5.Text = "KULÜBÜ:";
             // 
@@ -358,7 +358,7 @@ namespace Okul_Projesi
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(43, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 23);
+            this.label4.Size = new System.Drawing.Size(108, 35);
             this.label4.TabIndex = 2;
             this.label4.Text = "SOYAD:";
             // 
@@ -367,7 +367,7 @@ namespace Okul_Projesi
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(72, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 23);
+            this.label2.Size = new System.Drawing.Size(66, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "ADI:";
             // 
@@ -376,13 +376,13 @@ namespace Okul_Projesi
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 23);
+            this.label1.Size = new System.Drawing.Size(169, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "OGRENCI ID:";
             // 
             // FrmOgrenci
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(660, 529);

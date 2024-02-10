@@ -1,7 +1,7 @@
 ﻿
 namespace Okul_Projesi
 {
-    partial class FrmKlup
+    partial class FrmKulup
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Okul_Projesi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKlup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKulup));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@ namespace Okul_Projesi
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(290, 414);
+            this.pictureBox3.Location = new System.Drawing.Point(290, 462);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(74, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@ namespace Okul_Projesi
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 414);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 462);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +78,7 @@ namespace Okul_Projesi
             // btnEkle
             // 
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkle.Location = new System.Drawing.Point(118, 414);
+            this.btnEkle.Location = new System.Drawing.Point(118, 462);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(151, 48);
             this.btnEkle.TabIndex = 18;
@@ -89,7 +89,7 @@ namespace Okul_Projesi
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(21, 351);
+            this.pictureBox2.Location = new System.Drawing.Point(21, 399);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(74, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +99,7 @@ namespace Okul_Projesi
             // btnListele
             // 
             this.btnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListele.Location = new System.Drawing.Point(118, 351);
+            this.btnListele.Location = new System.Drawing.Point(118, 399);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(151, 48);
             this.btnListele.TabIndex = 20;
@@ -110,7 +110,7 @@ namespace Okul_Projesi
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(290, 351);
+            this.pictureBox4.Location = new System.Drawing.Point(290, 399);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(74, 48);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@ namespace Okul_Projesi
             // btnGuncelle
             // 
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuncelle.Location = new System.Drawing.Point(387, 351);
+            this.btnGuncelle.Location = new System.Drawing.Point(387, 399);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(151, 48);
             this.btnGuncelle.TabIndex = 22;
@@ -131,33 +131,33 @@ namespace Okul_Projesi
             // Txtid
             // 
             this.Txtid.Enabled = false;
-            this.Txtid.Location = new System.Drawing.Point(199, 279);
+            this.Txtid.Location = new System.Drawing.Point(246, 292);
             this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(294, 30);
+            this.Txtid.Size = new System.Drawing.Size(294, 42);
             this.Txtid.TabIndex = 24;
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(199, 315);
+            this.TxtAd.Location = new System.Drawing.Point(246, 340);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(294, 30);
+            this.TxtAd.Size = new System.Drawing.Size(294, 42);
             this.TxtAd.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 279);
+            this.label1.Location = new System.Drawing.Point(15, 292);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 23);
+            this.label1.Size = new System.Drawing.Size(140, 35);
             this.label1.TabIndex = 26;
             this.label1.Text = "KULÜP ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 318);
+            this.label2.Location = new System.Drawing.Point(15, 340);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 23);
+            this.label2.Size = new System.Drawing.Size(157, 35);
             this.label2.TabIndex = 27;
             this.label2.Text = "KULÜP ADI:";
             // 
@@ -176,7 +176,7 @@ namespace Okul_Projesi
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(92, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 23);
+            this.label3.Size = new System.Drawing.Size(277, 35);
             this.label3.TabIndex = 29;
             this.label3.Text = "KULÜP İŞLEM PANELİ";
             // 
@@ -187,6 +187,7 @@ namespace Okul_Projesi
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 66);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(532, 207);
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -194,7 +195,7 @@ namespace Okul_Projesi
             // btnSil
             // 
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSil.Location = new System.Drawing.Point(387, 414);
+            this.btnSil.Location = new System.Drawing.Point(387, 462);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(151, 48);
             this.btnSil.TabIndex = 14;
@@ -213,12 +214,12 @@ namespace Okul_Projesi
             this.pctKapat.TabStop = false;
             this.pctKapat.Click += new System.EventHandler(this.pctKapat_Click);
             // 
-            // FrmKlup
+            // FrmKulup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(550, 474);
+            this.ClientSize = new System.Drawing.Size(550, 514);
             this.Controls.Add(this.pctKapat);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -238,7 +239,7 @@ namespace Okul_Projesi
             this.Font = new System.Drawing.Font("Corbel", 14F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmKlup";
+            this.Name = "FrmKulup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKlup";
             this.Load += new System.EventHandler(this.FrmKlup_Load);

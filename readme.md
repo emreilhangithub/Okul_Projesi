@@ -2,7 +2,7 @@
 
 ## Proje Tanıtımı 
 
-*Bu projede **.Net** kullanarak E-Okul benzeri okul otomasyonu oluşturdum. CRUD operasyonları için ado.net disconnect mimari kullanıldım.*
+*Bu projede **.Net** kullanarak E-Okul benzeri okul otomasyonu oluşturdum. CRUD operasyonları için ado.net ve dataset kullanıldım.*
 
 # Database Yedeği #
 Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://github.com/emreilhangithub/Okul_Projesi/tree/master/database
@@ -27,8 +27,8 @@ Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://g
 Öğretmen istediği dersleri listeleme, ekleme, güncelleme, silme işlemleri yapabilir.
 ![DersIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/DersIslemPaneli.png)
 
-### Klüp İşlem Paneli
-Öğretmen istediği klüpleri listeleme, ekleme, güncelleme, silme işlemleri yapabilir.
+### Kulüp İşlem Paneli
+Öğretmen istediği kulüpleri listeleme, ekleme, güncelleme, silme işlemleri yapabilir.
 ![KulupIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/KulupIslemPaneli.png)
 
 ### Sınav Not Paneli

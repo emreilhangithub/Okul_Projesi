@@ -124,13 +124,22 @@ namespace Okul_Projesi
             try
             {
                 baglanti = connection.GetConnection();
-                if (string.IsNullOrEmpty(TxtAd.Text))
+                if (string.IsNullOrEmpty(TxtAd.Text) ||string.IsNullOrEmpty(TxtSifre.Text) || string.IsNullOrEmpty(CmbBrans.Text))
                 {
-                    MessageBox.Show("Lütfen Ad alanını eksiksiz doldurunuz");
+                    MessageBox.Show("Lütfen Tüm alanları eksiksiz doldurunuz");
                     return;
                 }
 
-                baglanti.Open();
+                string sql = "SELECT COUNT(*) FROM TBLOGRETMENLER WHERE OGRTADSOYAD = @OGRTADSOYAD";
+                SqlCommand kontrolKomut = new SqlCommand(sql, baglanti);
+                kontrolKomut.Parameters.AddWithValue("@OGRTADSOYAD", TxtAd.Text);
+                int count = (int)kontrolKomut.ExecuteScalar();
+                // Eğer kulüp adı mevcutsa hata döndür
+                if (count > 0)
+                {
+                    MessageBox.Show("Hata: Bu öğretmen adı ve soyadı zaten mevcut.");
+                    return;
+                }
                 SqlCommand komut = new SqlCommand("insert into TBLOGRETMENLER (OGRTBRANS,OGRTADSOYAD,OGRTSIFRE) values(@OGRTBRANS,@OGRTADSOYAD,@OGRTSIFRE)", baglanti);
                 komut.Parameters.AddWithValue("@OGRTBRANS", CmbBrans.SelectedValue);
                 komut.Parameters.AddWithValue("@OGRTADSOYAD", TxtAd.Text);
@@ -192,13 +201,25 @@ namespace Okul_Projesi
             try
             {
                 baglanti = connection.GetConnection();
-                if (string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text))
+                if (string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text) || string.IsNullOrEmpty(TxtSifre.Text) || string.IsNullOrEmpty(CmbBrans.Text))
                 {
-                    MessageBox.Show("Lütfen id ve ad alanlarını eksiksiz doldurunuz");
+                    MessageBox.Show("Lütfen Tüm ad alanını eksiksiz doldurunuz");
                     return;
                 }
 
-                baglanti.Open();
+                string sql = "SELECT COUNT(*) FROM TBLOGRETMENLER WHERE OGRTADSOYAD = @OGRTADSOYAD AND OGRTID <> @OGRTID";
+                SqlCommand kontrolKomut = new SqlCommand(sql, baglanti);
+                kontrolKomut.Parameters.AddWithValue("@OGRTADSOYAD", TxtAd.Text);
+                kontrolKomut.Parameters.AddWithValue("@OGRTID", Txtid.Text);
+                int count = (int)kontrolKomut.ExecuteScalar();
+                // Eğer kulüp adı mevcutsa hata döndür
+                if (count > 0)
+                {
+                    MessageBox.Show("Hata: Bu öğretmen adı ve soyadı zaten mevcut.");
+                    return;
+                }
+
+               
                 SqlCommand komut = new SqlCommand("Update TBLOGRETMENLER set OGRTBRANS=@OGRTBRANS,OGRTADSOYAD=@OGRTADSOYAD,OGRTSIFRE=@OGRTSIFRE where OGRTID = @OGRTID", baglanti);
                 komut.Parameters.AddWithValue("@OGRTBRANS", CmbBrans.SelectedValue);
                 komut.Parameters.AddWithValue("@OGRTADSOYAD", TxtAd.Text);

@@ -6,9 +6,9 @@ using Okul_Projesi.DataAccess;
 
 namespace Okul_Projesi
 {
-    public partial class FrmKlup : Form
+    public partial class FrmKulup : Form
     {
-        public FrmKlup()
+        public FrmKulup()
         {
             InitializeComponent();
         }
@@ -57,6 +57,18 @@ namespace Okul_Projesi
                     MessageBox.Show("Lütfen ad alanını eksiksiz doldurunuz");
                     return;
                 }
+
+                string sql = "SELECT COUNT(*) FROM TBLKULUPLER WHERE KULUPAD = @KulupAdi";
+                SqlCommand kontrolKomut = new SqlCommand(sql, baglanti);
+                kontrolKomut.Parameters.AddWithValue("@KulupAdi", TxtAd.Text);
+                int count = (int)kontrolKomut.ExecuteScalar();
+                // Eğer kulüp adı mevcutsa hata döndür
+                if (count > 0)
+                {
+                    MessageBox.Show("Hata: Bu kulüp adı zaten mevcut.");
+                    return;
+                }
+
                 SqlCommand komut = new SqlCommand("insert into TBLKULUPLER (KULUPAD) values(@p1)", baglanti);
                 komut.Parameters.AddWithValue("@p1", TxtAd.Text);
                 komut.ExecuteNonQuery();
@@ -113,9 +125,6 @@ namespace Okul_Projesi
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-
-
-
             try
             {
                 baglanti = connection.GetConnection();
@@ -124,6 +133,19 @@ namespace Okul_Projesi
                     MessageBox.Show("Lütfen id ve ad alanlarını eksiksiz doldurunuz");
                     return;
                 }
+
+                string sql = "SELECT COUNT(*) FROM TBLKULUPLER WHERE KULUPAD = @KULUPAD AND KULUPID <> @KULUPID";
+                SqlCommand kontrolKomut = new SqlCommand(sql, baglanti);
+                kontrolKomut.Parameters.AddWithValue("@KULUPAD", TxtAd.Text);
+                kontrolKomut.Parameters.AddWithValue("@KULUPID", Txtid.Text);
+                int count = (int)kontrolKomut.ExecuteScalar();
+                // Eğer kulüp adı mevcutsa hata döndür
+                if (count > 0)
+                {
+                    MessageBox.Show("Hata: Bu kulüp adı zaten mevcut.");
+                    return;
+                }
+
                 SqlCommand komut = new SqlCommand("Update TBLKULUPLER set KULUPAD=@p1 where KULUPID = @p2", baglanti);
                 komut.Parameters.AddWithValue("@p1", TxtAd.Text);
                 komut.Parameters.AddWithValue("@p2", Txtid.Text);

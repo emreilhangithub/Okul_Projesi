@@ -75,16 +75,31 @@ namespace Okul_Projesi
         private void BtnEkle_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(TxtAd.Text))
+            if (string.IsNullOrEmpty(TxtAd.Text) || string.IsNullOrEmpty(TxtSoyad.Text) || string.IsNullOrEmpty(TxtSifre.Text) || string.IsNullOrEmpty(CmbKulup.Text))
             {
-                MessageBox.Show("Lütfen Tüm ad alanını eksiksiz doldurunuz");
+                MessageBox.Show("Lütfen Tüm alanları eksiksiz doldurunuz");
                 return;
             }
 
-            //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
-            ds.OgrenciEkle(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.SelectedValue.ToString()), c, TxtSifre.Text);
-            MessageBox.Show("Ekleme İşlemi başarılı");
-            listele();
+            if (rdBtnErkek.Checked == false && rdBtnKiz.Checked == false)
+            {
+                MessageBox.Show("Lütfen Cinsiyet Seçiniz");
+                return;
+            }
+
+            var ogrenciEklemeKontrol = ds.OgrenciEklemeKontrol(TxtAd.Text,TxtSoyad.Text);
+            if (ogrenciEklemeKontrol > 0)
+            {
+                MessageBox.Show("Zaten bu isim ve soyisim var");
+                return;
+            }
+            else
+            {
+                //TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.Text),c
+                ds.OgrenciEkle(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.SelectedValue.ToString()), c, TxtSifre.Text);
+                MessageBox.Show("Ekleme İşlemi başarılı");
+                listele();
+            }           
         }
 
         private void CmbKulup_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,19 +144,31 @@ namespace Okul_Projesi
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-
-            if
-                (
-                string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text)
-                )
+            if (string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text) || string.IsNullOrEmpty(TxtSoyad.Text) || string.IsNullOrEmpty(TxtSifre.Text) || string.IsNullOrEmpty(CmbKulup.Text))
             {
-                MessageBox.Show("Lütfen ad ve id alanlarını eksiksiz doldurunuz");
+                MessageBox.Show("Lütfen Tüm ad alanını eksiksiz doldurunuz");
                 return;
             }
 
-            ds.OgrenciGuncelle(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.SelectedValue.ToString()), c, TxtSifre.Text, int.Parse(Txtid.Text));
-            MessageBox.Show("Güncelleme İşlemi başarılı");
-            listele();
+            if (rdBtnErkek.Checked == false && rdBtnKiz.Checked == false)
+            {
+                MessageBox.Show("Lütfen Cinsiyet Seçiniz");
+                return;
+            }
+
+            var OgrenciGuncellemeKontrol = ds.OgrenciGuncellemeKontrol(TxtAd.Text,TxtSoyad.Text,
+                byte.Parse(Txtid.Text));
+            if (OgrenciGuncellemeKontrol > 0)
+            {
+                MessageBox.Show("Zaten bu isim ve soyisim var");
+                return;
+            }
+            else
+            {
+                ds.OgrenciGuncelle(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.SelectedValue.ToString()), c, TxtSifre.Text, int.Parse(Txtid.Text));
+                MessageBox.Show("Güncelleme İşlemi başarılı");
+                listele();
+            }           
         }
 
         private void rdBtnKiz_CheckedChanged(object sender, EventArgs e)

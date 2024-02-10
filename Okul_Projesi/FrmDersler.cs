@@ -26,10 +26,19 @@ namespace Okul_Projesi
                 MessageBox.Show("Lütfen Ad Alanını eksiksiz doldurunuz");
                 return;
             }
-
-            ds.DersEkle(TxtAd.Text);
-            MessageBox.Show("Ders Ekleme İşlemi Yapılmıştır");
-            dataGridView1.DataSource = ds.DersListesi();
+            
+            var dersEklemeKontrol = ds.DersEklemeKontrol(TxtAd.Text);
+            if (dersEklemeKontrol > 0)
+            {
+                MessageBox.Show("Zaten Bu İsimde Ders Var");
+                return;
+            }
+            else
+            {
+                ds.DersEkle(TxtAd.Text);
+                MessageBox.Show("Ders Ekleme İşlemi Yapılmıştır");
+                dataGridView1.DataSource = ds.DersListesi();
+            }
         }
 
         private void btnListele_Click(object sender, EventArgs e)
@@ -60,9 +69,18 @@ namespace Okul_Projesi
                 return;
             }
 
-            ds.DersGuncelle(TxtAd.Text, byte.Parse(Txtid.Text));
-            MessageBox.Show("Ders Güncelleme İşlemi Yapılmıştır");
-            dataGridView1.DataSource = ds.DersListesi();
+            var DersGuncellemeKontrol = ds.DersGuncellemeKontrol(TxtAd.Text, byte.Parse(Txtid.Text));
+            if (DersGuncellemeKontrol > 0)
+            {
+                MessageBox.Show("Zaten Bu İsimde Ders Var");
+                return;
+            }
+            else
+            {
+                ds.DersGuncelle(TxtAd.Text, byte.Parse(Txtid.Text));
+                MessageBox.Show("Ders Güncelleme İşlemi Yapılmıştır");
+                dataGridView1.DataSource = ds.DersListesi();
+            }           
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
