@@ -19,6 +19,8 @@ Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://g
 
 ### Öğretmen Paneli
 Öğretmen sisteme giriş yaptıktan sonra ders, kulüp, sınav, ögretmen,ögrenci işlemleri yapabileceği ekran onu karşılar.
+
+
 ![OgretmenPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/OgretmenPaneli.png)
 
 ### Ders İşlem Paneli
@@ -45,7 +47,7 @@ Not = Aynı dersten sınav notu ekleme engellendi daha önce notu eklenmiş ders
 
 3)Sınav Arama ve Güncelleme = Ögretmen ögrencinin kullanıcı idsini grip arama butonuna basarak ögrencinin kayıtlı notlarını bulabilir.
 Güncelleme butonuna basarsa ögrencinin var olan notlarını günceller.
-Not = Örnek öğretmen daha önce ders notu girilmemiş dersi eklemeye çalışırsa direk günceller. Fakat daha önce notu girilen bir dersi seçerse o dersi güncellemiş olur yani şuan işlem yaptığı dersi güncelleyemez.
+Not = Örnek öğretmen daha önce ders notu girilmemiş dersi güncellemeye çalışırsa direk günceller. Fakat daha önce notu girilen bir dersi seçerse o dersi güncellemiş olur yani şuan işlem yaptığı dersi güncelleyemez.
 
 
 ![SinavNotGetir](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/SinavNotGetir.png)
