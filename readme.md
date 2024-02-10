@@ -25,10 +25,16 @@ Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://g
 
 ### Ders İşlem Paneli
 Öğretmen istediği dersleri listeleme, ekleme, güncelleme, silme işlemleri yapabilir.
+Dublicate yani aynı verinin olup olmadığının kontrolü sağlandı.
+
+
 ![DersIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/DersIslemPaneli.png)
 
 ### Kulüp İşlem Paneli
 Öğretmen istediği kulüpleri listeleme, ekleme, güncelleme, silme işlemleri yapabilir.
+Dublicate yani aynı verinin olup olmadığının kontrolü sağlandı.
+
+
 ![KulupIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/KulupIslemPaneli.png)
 
 ### Sınav Not Paneli
@@ -55,10 +61,16 @@ Not = Örnek öğretmen daha önce ders notu girilmemiş dersi güncellemeye ça
 
 ### Öğretmen İşlem Paneli
 Öğretmen istediği öğretmenleri listeleme, arama, ekleme, güncelleme, silme işlemleri yapabilir.
+Dublicate yani aynı verinin olup olmadığının kontrolü sağlandı.
+
+
 ![OgretmenIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/OgretmenIslemPaneli.png)
 
 ### Öğrenci İşlem Paneli
 Öğretmen istediği öğrencileri listeleme, arama, ekleme, güncelleme, silme işlemleri yapabilir.
+Dublicate yani aynı verinin olup olmadığının kontrolü sağlandı.
+
+
 ![OgrenciIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/OgrenciIslemPaneli.png)
 
 ```.NET``` ```C#``` ```MSSQL```  ```WindowsForm``` ```Software``` ```Computer``` ```Programmer```
