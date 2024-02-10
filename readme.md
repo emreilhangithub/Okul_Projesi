@@ -30,14 +30,22 @@ Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://g
 ![KulupIslemPaneli](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/KulupIslemPaneli.png)
 
 ### Sınav Not Paneli
-1)Hesaplatma = Öğretmen ögrencinin sınav notları girerek hesapla butona basarak ögrenincinin ortalamasını ve durumunu öğrenebilir.
+1)Sınav Not Hesaplatma = Öğretmen ögrencinin sınav notları girerek hesapla butona basarak ögrenincinin ortalamasını ve durumunu öğrenebilir.
 
 
 ![SinavNotHesaplama](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/SinavNotHesaplama.png)
 
 
-2)Arama ve Güncelleme = Ögretmen ögrencinin kullanıcı idsini girip arama butonuna basarak ögrencinin kayıtlı notlarını bulabilir.
+
+2)Sınav Not Ekleme =  Öğretmen ögrencinin sınav notlarını hesaplattıktan sonra ekle butonuna basarak sınavını ekleyebilir.
+Not = Aynı dersten sınav notu ekleme engellendi daha önce notu eklenmiş dersi ekleyemez.
+![SinavNotEkleme](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/SinavNotEkleme.png)
+
+
+
+3)Sınav Arama ve Güncelleme = Ögretmen ögrencinin kullanıcı idsini grip arama butonuna basarak ögrencinin kayıtlı notlarını bulabilir.
 Güncelleme butonuna basarsa ögrencinin var olan notlarını günceller.
+Not = Örnek öğretmen daha önce ders notu girilmemiş dersi eklemeye çalışırsa direk günceller. Fakat daha önce notu girilen bir dersi seçerse o dersi güncellemiş olur yani şuan işlem yaptığı dersi güncelleyemez.
 
 
 ![SinavNotGetir](https://github.com/emreilhangithub/Okul_Projesi/blob/master/images/SinavNotGetir.png)
